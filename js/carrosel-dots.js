@@ -2,6 +2,7 @@ function carroselDots(config){
     this.item = document.querySelectorAll(config.item);
     this.boxitem = document.querySelector(config.boxitem);
     this.dots = document.querySelector(config.dots);
+    this.tipoDots = config.tipoDots;
 
     var _this = this;
     var listaDots;
@@ -15,21 +16,20 @@ function carroselDots(config){
 
     listaDots.forEach(elemento => {
         elemento.addEventListener('click', function(e){
-            console.log(e.target);
-            slideShow(e.target.id);
+            slideShow(e.target);
         });
     });
 
-    function slideShow(index){
-        document.querySelector('.projetos .dots-front div.ativo').classList.remove('ativo');
-        _this.boxitem.style.marginLeft = -tamanhoItem*index + 'px';
-        listaDots[index].classList.add('ativo');
+    function slideShow(slideAlvo){
+        document.querySelector(_this.tipoDots).classList.remove('ativo');
+        _this.boxitem.style.marginLeft = -tamanhoItem*parseInt(slideAlvo.classList) + 'px';
+        listaDots[parseInt(slideAlvo.classList)].classList.add('ativo');
     }
 
     function criarDots(){
         for(var i = 0; i < _this.item.length; i++){
             var div = document.createElement('div');
-            div.id = i;
+            div.classList.add(i);
             _this.dots.appendChild(div);
         }
     }
