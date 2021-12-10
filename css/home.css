@@ -169,7 +169,7 @@ main{
     background-color: var(--cor-fonte-gold);
 }
 
-.projetos-front{
+.projetos-front, .outros-projetos{
     margin-bottom: 30px;
     margin-right: 30px;
     box-sizing: border-box;
@@ -178,13 +178,13 @@ main{
     overflow: hidden;
 }
 
-.projetos-front .boxitem{
+.projetos .boxitem{
     display: flex;
     overflow: hidden;
     transition: all .6s;
 }
 
-.projetos-front .boxitem article{
+.projetos .boxitem article{
     min-width: 280px;
     max-width: 280px;
     margin: 0 10px;

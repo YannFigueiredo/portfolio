@@ -15,6 +15,7 @@ function carroselDots(config){
 
     listaDots.forEach(elemento => {
         elemento.addEventListener('click', function(e){
+            console.log(e.target);
             slideShow(e.target.id);
         });
     });
