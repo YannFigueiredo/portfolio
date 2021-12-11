@@ -48,7 +48,6 @@ function carroselDots(config){
 
     function slideShowAuto(){
         setInterval(function(){
-            console.log(slideAtual);
             if(slideAuto == true){
                 if(slideAtual+1 > _this.item.length - 1){
                     slideShow(0);

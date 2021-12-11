@@ -77,6 +77,11 @@ main{
     margin-bottom: 30px;
 }
 
+.container-ferramentas{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .projetos-ferramentas .conhecimento .ferramentas{
     width: 70px;
     height: 70px;
@@ -132,6 +137,7 @@ main{
 .projetos .ferramentas{
     display: flex;
     justify-content: right;
+    margin-top: 5px;
 }
 
 .projetos .ferramentas div{
@@ -174,7 +180,7 @@ main{
     margin-right: 30px;
     box-sizing: border-box;
     width: 300px;
-    height: 320px;
+    height: auto;
     overflow: hidden;
 }
 
@@ -189,4 +195,71 @@ main{
     max-width: 280px;
     margin: 0 10px;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 1225px) {
+    html, body{
+        overflow: auto;
+    }
+
+    body{
+        background: var(--cor-principal-bg);
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .apresentacao{
+        background-color: white;
+        border-radius: 30px;
+        padding: 15px;
+    }
+
+    .apresentacao .sobre{
+        text-align: center;
+    }
+
+    .apresentacao .btn-codigo{
+        margin: 30px auto 0 auto;
+    }
+
+    .projetos-ferramentas{
+        margin-top: 30px;
+    }
+
+    .projetos-ferramentas .conhecimento, .projetos-ferramentas .projetos{
+        justify-content: center;
+    }
+
+    .projetos h2{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 790px){
+    h1{
+        font-size: 60px;
+    }
+
+    .container{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    
+    .projetos{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .projetos-front, .outros-projetos{
+        margin: 20px 0 0 0;
+    }
+
+    .container-ferramentas{
+        justify-content: center;
+        margin-top: 15px;
+    }
 }

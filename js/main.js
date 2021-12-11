@@ -12,4 +12,8 @@
         dots: '.outros-projetos .dots-outros',
         tipoDots: '.projetos .dots-outros div.ativo'
     });
+
+    window.addEventListener('resize', function(){
+        console.log(window.innerWidth);
+    });
 }());
