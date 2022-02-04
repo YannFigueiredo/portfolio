@@ -78,8 +78,10 @@ main{
 }
 
 .container-ferramentas{
+    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .projetos-ferramentas .conhecimento .ferramentas{
